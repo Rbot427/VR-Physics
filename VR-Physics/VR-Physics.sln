@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{085FE9BB-3DC0-CBC1-2C12-23B8632DF879}") = "VR-Physics", "Assembly-CSharp.csproj", "{3323482C-0D18-0C5D-7E34-9126C9429037}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3323482C-0D18-0C5D-7E34-9126C9429037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3323482C-0D18-0C5D-7E34-9126C9429037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3323482C-0D18-0C5D-7E34-9126C9429037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3323482C-0D18-0C5D-7E34-9126C9429037}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
