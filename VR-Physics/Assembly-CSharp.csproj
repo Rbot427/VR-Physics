@@ -45,7 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AbstractObject.cs" />
+     <Compile Include="Assets\CollisionForce.cs" />
+     <Compile Include="Assets\ConcreteObject.cs" />
+     <Compile Include="Assets\DynamicConcrete.cs" />
+     <Compile Include="Assets\Force.cs" />
+     <Compile Include="Assets\Friction.cs" />
+     <Compile Include="Assets\Gravity.cs" />
      <Compile Include="Assets\Move.cs" />
+     <Compile Include="Assets\StaticConcrete.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
