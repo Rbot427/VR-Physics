@@ -2,5 +2,6 @@
 using System.Collections;
 
 public interface Displayable {
-   getProperties();
+	System.Reflection.PropertyInfo[] getProperties();
+
 }
