@@ -1,9 +1,9 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{61FBF95F-E012-48E2-E493-1B748C132902}") = "Unity Minus Minus", "Assembly-CSharp.csproj", "{EB70D3EC-18B2-F380-25BB-2ABF750AE3D8}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity Minus Minus", "Assembly-CSharp.csproj", "{EB70D3EC-18B2-F380-25BB-2ABF750AE3D8}"
 EndProject
-Project("{61FBF95F-E012-48E2-E493-1B748C132902}") = "Unity Minus Minus", "Assembly-CSharp-Editor.csproj", "{0CC315FA-315F-6980-D88D-79CF38EFEC90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity Minus Minus", "Assembly-CSharp-Editor.csproj", "{0CC315FA-315F-6980-D88D-79CF38EFEC90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{085FE9BB-3DC0-CBC1-2C12-23B8632DF879}") = "VR-Physics", "Assembly-CSharp.csproj", "{3323482C-0D18-0C5D-7E34-9126C9429037}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR-Physics", "VR-Physics.csproj", "{21942BB8-CB36-7070-7E0B-AFE1D4A5ADDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3323482C-0D18-0C5D-7E34-9126C9429037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3323482C-0D18-0C5D-7E34-9126C9429037}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3323482C-0D18-0C5D-7E34-9126C9429037}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3323482C-0D18-0C5D-7E34-9126C9429037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21942BB8-CB36-7070-7E0B-AFE1D4A5ADDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21942BB8-CB36-7070-7E0B-AFE1D4A5ADDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21942BB8-CB36-7070-7E0B-AFE1D4A5ADDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21942BB8-CB36-7070-7E0B-AFE1D4A5ADDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

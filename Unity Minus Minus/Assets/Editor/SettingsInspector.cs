@@ -19,7 +19,7 @@ public class SettingsInspector : Editor {
 		foreach(PropertyInfo i in p) {
 			System.Type t = i.PropertyType;
 			if(t.IsClass) {
-				if(t.GetInterface("Displayable") != null) {
+				if(t.GetInterface("Displayable") != null) {//So if one of the properties is another object
 					Debug.Log("Awww, crap... I haven't implemented that yet...");
 				}
 			}
@@ -29,15 +29,16 @@ public class SettingsInspector : Editor {
 
 			if(t.Equals(typeof(System.Int32))) {
 				param[0] = EditorGUILayout.IntField(i.Name, (int)get.Invoke(tar, null));
-				setter.Invoke(tar, param);
 			} else if(t.Equals(typeof(System.String))) {
 				param[0] = EditorGUILayout.TextField(i.Name, (string)get.Invoke(tar, null));
-				setter.Invoke(tar, param);
 			} else if(t.Equals(typeof(System.Double))) {
 				param[0] = EditorGUILayout.DoubleField(i.Name, (double)get.Invoke(tar, null));
-				setter.Invoke(tar, param);
 			}
-
+			if (param [0] != null) {
+				GUILayout.BeginHorizontal ();
+				setter.Invoke (tar, param);
+				GUILayout.EndHorizontal ();
+			}
 		}
 	}
 }
