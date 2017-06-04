@@ -18,6 +18,9 @@ public abstract class SolidObject : DisplayContainer {
 
 		gameObject.AddComponent<MeshFilter> ();
 		meshFilter = gameObject.GetComponent<MeshFilter> ();
+		GameObject temp_cube = GameObject.CreatePrimitive (PrimitiveType.Cube);
+		meshFilter.mesh = (temp_cube).GetComponent<MeshFilter>().sharedMesh;
+		GameObject.DestroyImmediate (temp_cube);
 
 		gameObject.AddComponent<MeshRenderer> ();
 		meshRenderer = gameObject.GetComponent<MeshRenderer> ();
