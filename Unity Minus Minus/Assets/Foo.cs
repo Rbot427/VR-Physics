@@ -24,13 +24,13 @@ public class Foo : DisplayContainer {
 	//public Rigidbody r;
 
 	// Use this for initialization
-	void Start () {
-
+	new void Start () {
+		base.Start ();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	new void Update () {
+		base.Update ();
 	}
 
 }
