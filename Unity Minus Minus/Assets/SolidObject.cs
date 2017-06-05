@@ -12,18 +12,25 @@ public abstract class SolidObject : DisplayContainer {
 	// Use this for initialization
 	virtual new protected void Start () {
 		base.Start ();
-		gameObject.AddComponent<Rigidbody>();
-		rigidBody = gameObject.GetComponent<Rigidbody> ();
-		rigidBody.useGravity = false;
 
-		gameObject.AddComponent<MeshFilter> ();
-		meshFilter = gameObject.GetComponent<MeshFilter> ();
-		GameObject temp_cube = GameObject.CreatePrimitive (PrimitiveType.Cube);
-		meshFilter.mesh = (temp_cube).GetComponent<MeshFilter>().sharedMesh;
-		GameObject.DestroyImmediate (temp_cube);
+		if (gameObject.GetComponent<Rigidbody> () == null) {
+			gameObject.AddComponent<Rigidbody> ();
+			rigidBody = gameObject.GetComponent<Rigidbody> ();
+			rigidBody.useGravity = false;
+		}
 
-		gameObject.AddComponent<MeshRenderer> ();
-		meshRenderer = gameObject.GetComponent<MeshRenderer> ();
+		if (gameObject.GetComponent<MeshFilter> () == null) {
+			gameObject.AddComponent<MeshFilter> ();
+			meshFilter = gameObject.GetComponent<MeshFilter> ();
+			GameObject temp_cube = GameObject.CreatePrimitive (PrimitiveType.Cube);
+			meshFilter.mesh = (temp_cube).GetComponent<MeshFilter> ().sharedMesh;
+			GameObject.DestroyImmediate (temp_cube);
+		}
+
+		if (gameObject.GetComponent<MeshRenderer> () == null) {
+			gameObject.AddComponent<MeshRenderer> ();
+			meshRenderer = gameObject.GetComponent<MeshRenderer> ();
+		}
 	}
 
 	// Update is called once per frame

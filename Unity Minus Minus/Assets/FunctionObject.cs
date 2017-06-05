@@ -15,4 +15,8 @@ public abstract class FunctionObject : DisplayContainer {
 	protected virtual new void Update () {
 		base.Start ();
 	}
+
+	protected virtual void OnDrawGizmos(){
+		
+	}
 }

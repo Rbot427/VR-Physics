@@ -26,7 +26,7 @@ public class LinearForce : FunctionObject {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
-		direction=new Vector3(0,1,0);
+		direction.Normalize ();
 		rb = gameObject.GetComponent<Rigidbody> ();
 
 		//will be removed once custom inspector is working
@@ -36,6 +36,13 @@ public class LinearForce : FunctionObject {
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update ();
+	}
+
+	protected override void OnDrawGizmos(){
+		Vector3 pos = gameObject.transform.position;
+		direction.Normalize ();
+		Vector3 dir = direction*getForce ();
+		Gizmos.DrawLine (pos, pos+dir);
 	}
 
 	protected void FixedUpdate(){
