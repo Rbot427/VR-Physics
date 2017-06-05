@@ -7,27 +7,30 @@ public class LinearForce : FunctionObject {
 	//@TODO: add widget showing direction of force at start
 
 	public Vector3 direction;
-
-	public int m;
-	public int b;
-	public System.Object x_object;//object to which getter is applied
-	public MethodInfo x_getter;//Default inspector can't handle this, I don't think. We'll need to add it to custom inspector
-
 	public Rigidbody rb;
+
+
+	//delegates work!
+	public delegate float Function();
+	public Function getForce;
+
+	//this is here because custom inspector can't handle delegates yet
+	private float GetForce(){
+		float m = 0;
+		float b = 1;
+		float x = gameObject.transform.position.y;
+
+		return m * x + b;
+	}
 
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
 		direction=new Vector3(0,1,0);
-
-		m = 0;
-		b = 1;
 		rb = gameObject.GetComponent<Rigidbody> ();
 
-		//while custom inspector can't handle adding a getter
-		x_object=gameObject.transform.position;
-		x_getter=gameObject.transform.position.GetType().GetProperty("Item").GetGetMethod();
-		Debug.Log (x_getter.Invoke ((System.Object)x_object, null));
+		//will be removed once custom inspector is working
+		getForce=GetForce;
 	}
 
 	// Update is called once per frame
@@ -36,8 +39,7 @@ public class LinearForce : FunctionObject {
 	}
 
 	protected void FixedUpdate(){
-		int x = (int)x_getter.Invoke (x_object, null);
-		int scale = m * x + b;
+		float scale = getForce ();
 		direction.Normalize ();
 		rb.AddForce (direction*scale);
 	}
